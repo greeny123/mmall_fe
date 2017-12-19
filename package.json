@@ -1,0 +1,35 @@
+{
+  "name": "mmall_fe",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "mocha": "1.x"
+  },
+  "description": "mmall前端代码",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greeny123/mmall_fe.git"
+  },
+  "author": "greeny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greeny123/mmall_fe/issues"
+  },
+  "homepage": "https://github.com/greeny123/mmall_fe#readme",
+  "dependencies": {
+    "webpack": "^1.15.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
