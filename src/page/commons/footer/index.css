@@ -1,0 +1,23 @@
+/*
+* @Author: greeny123
+* @Date:   2017-12-23 17:31:49
+* @Last Modified by:   greeny123
+* @Last Modified time: 2017-12-23 17:37:19
+*/
+.footer{
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.footer .links{
+	text-align: center;
+	color: #666;
+	line-height: 30px;
+}
+.footer .links .link{
+	padding: 0 10px;  /*上下距离0 左右间距10*/
+}
+.footer .copyright{
+	text-align: center;
+	color: #666;
+	line-height: 30px;
+}

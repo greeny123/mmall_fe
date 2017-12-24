@@ -1,0 +1,28 @@
+/*
+* @Author: greeny123
+* @Date:   2017-12-23 21:58:07
+* @Last Modified by:   greeny123
+* @Last Modified time: 2017-12-24 00:35:07
+*/
+
+/*侧边导航主体*/
+.nav-side{
+	float: left;
+	width: 130px;
+	min-height: 100px;     /*设定高度和宽度*/
+}
+.nav-side .nav-item{
+	line-height: 25px;
+	font-size: 13px;
+}
+.nav-side .nav-item .link{
+	color: #888;
+}
+.nav-side .nav-item.active .link{ /*选定的导航条 特殊表示*/
+	color: #c60023;
+}
+/*右侧内容区*/
+.content.with-nav{
+	float: left;
+	width: 950px;
+}

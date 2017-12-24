@@ -1,0 +1,34 @@
+/*
+* @Author: greeny123
+* @Date:   2017-12-23 14:58:04
+* @Last Modified by:   greeny123
+* @Last Modified time: 2017-12-23 15:20:49
+*/
+.nav{
+	background: #eee;
+	height: 30px;
+	line-height: 30px;
+}
+
+/*用户部分 class内容有user的*/
+.nav .user{
+	float: left;
+}
+/*class中有user和login的*/
+.nav .user.login{
+	display: none;
+}
+.nav .user .link{
+	margin-right: 5px;   /*使得左对齐 */
+}
+
+/*导航链接部分*/
+.nav .nav-list{
+	float: right;
+}
+.nav .nav-list .nav-item{
+	/*将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格*/
+	/*inline-block主要的用处是用来处理行内非替换元素的高宽问题的！*/
+	display: inline-block;
+	margin-left: 5px;
+}
