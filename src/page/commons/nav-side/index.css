@@ -2,7 +2,7 @@
 * @Author: greeny123
 * @Date:   2017-12-23 21:58:07
 * @Last Modified by:   greeny123
-* @Last Modified time: 2017-12-24 00:35:07
+* @Last Modified time: 2017-12-24 15:03:37
 */
 
 /*侧边导航主体*/
@@ -24,5 +24,5 @@
 /*右侧内容区*/
 .content.with-nav{
 	float: left;
-	width: 950px;
+	width: 950px;        /*130 + 950 = 1080px*/
 }

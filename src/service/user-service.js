@@ -2,12 +2,48 @@
 * @Author: greeny123
 * @Date:   2017-12-23 16:07:23
 * @Last Modified by:   greeny123
-* @Last Modified time: 2017-12-23 16:53:53
+* @Last Modified time: 2017-12-27 12:24:10
 */
 
 var _mm = require('util/mm.js');
 
 var _user = {
+	// 用户登录
+    login : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/login.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+
+    //检查用户名
+    checkUsername : function(username,resolve,reject){
+        _mm.request({
+            url  : _mm.getServerUrl('/user/check_valid.do'),
+            data :{
+                type : 'username',
+                data : username
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+
+    //注册
+    register : function(userInfo,resolve,reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/register.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+
 	// 登出
     logout : function(resolve, reject){
         _mm.request({
@@ -26,7 +62,68 @@ var _user = {
 			success: resolve,
 			error  : reject
 		});
-	}
+	},
+    //获取密码提示问题
+    getQuestion : function(username,resolve,reject){
+        _mm.request({
+            url : _mm.getServerUrl('/user/forget_get_question.do'),
+            data : {
+                username : username
+            },
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    //检查密码提示问题答案
+    checkAnswer : function(userInfo,resolve,reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/forget_check_answer.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    //检查问题的答案 并且重置密码
+    resetPassword : function(userInfo,resolve,reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/forget_reset_password.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 获取用户信息
+    getUserInfo : function(resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/get_information.do'),
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 更新个人信息
+    updateUserInfo : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/update_information.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 登录状态下更新密码
+    updatePassword : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/reset_password.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    }
 }
 
 module.exports = _user;
